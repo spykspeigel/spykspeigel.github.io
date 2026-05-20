@@ -7,15 +7,15 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Your Name / Site Title"
+title                    : "Saroj Chhatoi"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
-url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
-teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
-breadcrumbs              : false # true, false (default)
+name                     : &name "Saroj Chhatoi"
+description              : &description "Notes on probability, statistical physics, large deviations, and computation."
+url                      : "https://spykspeigel.github.io"
+baseurl                  : ""
+repository               : "spykspeigel/spykspeigel.github.io"
+teaser                   :
+breadcrumbs              : false
 words_per_minute         : 160
 future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
@@ -48,7 +48,7 @@ staticman:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
   path                   : # blank (default) uses feed.xml
-
+remote_theme             : daattali/beautiful-jekyll@6.0.1
 # SEO Related
 google_site_verification :
 bing_site_verification   :
@@ -78,25 +78,24 @@ analytics:
     tracking_id          :
 
 
-# Site Author
 author:
-  name             : "Your Sidebar Name"
+  name             : "Saroj Chhatoi"
   avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
+  bio              : "Probability, statistical physics, large deviations, and computation."
+  location         : "Paris, France"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              :
+  pubmed           :
+  googlescholar    :
+  email            : "chhatoisaroj@gmail.com"
+  researchgate     :
+  uri              : "https://spykspeigel.github.io"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : "spykspeigel"
   google_plus      :
   keybase          :
   instagram        :
@@ -260,11 +259,10 @@ timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database
 
 # Plugins
 plugins:
+  - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
-  - jekyll-redirect-from
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
