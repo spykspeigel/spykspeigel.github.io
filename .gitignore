@@ -1,2 +1,6 @@
 _site/
+cv/*.aux
+cv/*.log
+cv/*.out
+cv/main.pdf
 

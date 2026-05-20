@@ -1,0 +1,404 @@
+body.profile-home {
+  margin: 0;
+  color: #222;
+  background: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.62;
+}
+
+.profile-home a {
+  color: #8b1e1e;
+  text-decoration: none;
+}
+
+.profile-home a:hover {
+  color: #4f1111;
+  text-decoration: underline;
+}
+
+.profile-shell {
+  width: min(920px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 28px 0 56px;
+}
+
+.profile-nav {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #e6e0d8;
+}
+
+.profile-brand {
+  color: #161616;
+  font-size: 1.45rem;
+  font-weight: 650;
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 18px;
+  font-size: 0.98rem;
+}
+
+.profile-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 210px;
+  gap: 48px;
+  padding: 38px 0 30px;
+  align-items: start;
+}
+
+.profile-copy h1 {
+  margin: 0 0 14px;
+  font-size: 1.9rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.profile-copy h1 a {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.profile-keywords {
+  margin: 0 0 22px;
+  color: #333;
+  font-size: 1.08rem;
+  font-weight: 600;
+}
+
+.profile-content p {
+  margin: 0 0 16px;
+}
+
+.profile-media {
+  padding-top: 4px;
+}
+
+.profile-media img {
+  display: block;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 3px;
+  border: 1px solid #ddd6cd;
+}
+
+.profile-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 14px;
+  color: #666;
+  font-size: 0.94rem;
+}
+
+.profile-section {
+  padding-top: 28px;
+  margin-top: 22px;
+  border-top: 1px solid #e6e0d8;
+}
+
+.profile-section h2 {
+  margin: 0 0 18px;
+  font-size: 1.35rem;
+  font-weight: 650;
+}
+
+.theme-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.theme-item h3,
+.work-item h3 {
+  margin: 0 0 5px;
+  font-size: 1.02rem;
+  font-weight: 650;
+}
+
+.theme-item p,
+.work-item p {
+  margin: 0;
+  color: #555;
+  font-size: 0.96rem;
+}
+
+.work-list {
+  display: grid;
+  gap: 18px;
+}
+
+.work-item {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.work-thumb {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  color: #6e1b1b;
+  background: #f4efe8;
+  border: 1px solid #ded5ca;
+  border-radius: 3px;
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+.work-item span {
+  display: block;
+  margin-top: 4px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.profile-page {
+  padding: 38px 0 20px;
+}
+
+.profile-page-header {
+  max-width: 760px;
+  margin-bottom: 30px;
+}
+
+.profile-page-header h1 {
+  margin: 0 0 10px;
+  color: #161616;
+  font-size: 2rem;
+  font-weight: 650;
+  line-height: 1.22;
+}
+
+.profile-page-header p {
+  margin: 0;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+.profile-page-content {
+  max-width: 760px;
+}
+
+.profile-page-content h2 {
+  margin: 34px 0 12px;
+  color: #161616;
+  font-size: 1.34rem;
+  font-weight: 650;
+}
+
+.profile-page-content h3 {
+  margin: 26px 0 8px;
+  color: #222;
+  font-size: 1.08rem;
+  font-weight: 650;
+}
+
+.profile-page-content p,
+.profile-page-content li {
+  color: #333;
+  font-size: 1rem;
+}
+
+.profile-page-content p {
+  margin: 0 0 16px;
+}
+
+.profile-page-content ul,
+.profile-page-content ol {
+  padding-left: 24px;
+  margin: 0 0 18px;
+}
+
+.profile-page-content blockquote {
+  margin: 20px 0;
+  padding-left: 18px;
+  color: #555;
+  border-left: 3px solid #ded5ca;
+}
+
+.profile-page-content code {
+  padding: 0.12rem 0.26rem;
+  background: #f5f1eb;
+  border-radius: 3px;
+  font-size: 0.92em;
+}
+
+.profile-page-content pre {
+  overflow-x: auto;
+  padding: 16px;
+  background: #f8f5f0;
+  border: 1px solid #e6ded4;
+  border-radius: 3px;
+}
+
+.profile-page-content pre code {
+  padding: 0;
+  background: transparent;
+}
+
+.profile-note {
+  max-width: 760px;
+  margin: 0 0 24px;
+  padding: 14px 16px;
+  color: #555;
+  background: #f8f5f0;
+  border: 1px solid #e6ded4;
+  border-radius: 3px;
+  font-size: 0.95rem;
+}
+
+.profile-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 13px;
+  color: #fff !important;
+  background: #8b1e1e;
+  border-radius: 3px;
+  font-size: 0.95rem;
+}
+
+.profile-button:hover {
+  background: #4f1111;
+  text-decoration: none !important;
+}
+
+.cv-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 18px;
+}
+
+.cv-pdf {
+  display: block;
+  width: 100%;
+  height: min(1120px, 78vh);
+  margin: 0 0 24px;
+  background: #f8f5f0;
+  border: 1px solid #ded5ca;
+  border-radius: 3px;
+}
+
+.profile-post-meta {
+  display: grid;
+  gap: 4px;
+  color: #777;
+  font-size: 0.92rem;
+}
+
+.profile-post-meta span {
+  color: #8a8178;
+}
+
+.profile-post-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  max-width: 760px;
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid #e6e0d8;
+  font-size: 0.94rem;
+}
+
+.archive__subtitle {
+  margin: 32px 0 14px;
+  color: #161616;
+  font-size: 1.18rem;
+  font-weight: 650;
+}
+
+.list__item {
+  margin-bottom: 24px;
+}
+
+.archive__item {
+  padding: 0 0 22px;
+  border-bottom: 1px solid #eee7df;
+}
+
+.archive__item-title {
+  margin: 0 0 5px;
+  font-size: 1.08rem;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.archive__item p {
+  margin: 0 0 8px;
+  color: #555;
+  font-size: 0.96rem;
+}
+
+.archive__item-excerpt p {
+  margin-bottom: 0;
+}
+
+.page__date,
+.page__meta {
+  color: #777 !important;
+  font-size: 0.92rem !important;
+}
+
+@media (max-width: 720px) {
+  .profile-shell {
+    width: min(100% - 28px, 920px);
+    padding-top: 20px;
+  }
+
+  .profile-nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .profile-links {
+    justify-content: flex-start;
+    gap: 12px 16px;
+  }
+
+  .profile-intro {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 28px;
+  }
+
+  .profile-media {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .profile-media img {
+    width: 112px;
+    height: 112px;
+  }
+
+  .theme-list {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-page {
+    padding-top: 28px;
+  }
+
+  .profile-page-header h1 {
+    font-size: 1.62rem;
+  }
+
+  .profile-post-footer {
+    flex-direction: column;
+  }
+}

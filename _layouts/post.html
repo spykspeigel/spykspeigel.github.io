@@ -1,0 +1,48 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+    <link rel="stylesheet" href="{{ base_path }}/assets/css/profile-home.css">
+  </head>
+
+  <body class="profile-home">
+    <main class="profile-shell">
+      {% include profile-nav.html %}
+
+      <article class="profile-page profile-post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="profile-page-header">
+          <h1 itemprop="headline">{{ page.title }}</h1>
+          {% if page.subtitle %}
+            <p>{{ page.subtitle }}</p>
+          {% endif %}
+          <div class="profile-post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+            {% if page.tags and page.tags.size > 0 %}
+              <span>{{ page.tags | join: " - " }}</span>
+            {% endif %}
+          </div>
+        </header>
+
+        <div class="profile-page-content" itemprop="articleBody">
+          {{ content }}
+        </div>
+
+        <footer class="profile-post-footer">
+          {% if page.previous %}
+            <a href="{{ page.previous.url | prepend: base_path }}">Previous: {{ page.previous.title }}</a>
+          {% endif %}
+          {% if page.next %}
+            <a href="{{ page.next.url | prepend: base_path }}">Next: {{ page.next.title }}</a>
+          {% endif %}
+        </footer>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,24 +1,33 @@
 ---
-layout: default
+layout: compress
 ---
 
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% endif %}
+{% include base_path %}
 
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+    <link rel="stylesheet" href="{{ base_path }}/assets/css/profile-home.css">
+  </head>
 
-<div id="main" role="main">
-  {% include sidebar.html %}
+  <body class="profile-home">
+    <main class="profile-shell">
+      {% include profile-nav.html %}
 
-  <div class="archive">
-    {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 class="page__title">{{ page.title }}</h1>
-    {% endunless %}
-    {{ content }}
-  </div>
-</div>
+      <article class="profile-page">
+        <header class="profile-page-header">
+          <h1>{{ page.title }}</h1>
+          {% if page.excerpt %}
+            <p>{{ page.excerpt }}</p>
+          {% endif %}
+        </header>
+
+        <div class="profile-page-content archive">
+          {{ content }}
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

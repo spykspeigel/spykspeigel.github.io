@@ -1,0 +1,84 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+    <link rel="stylesheet" href="{{ base_path }}/assets/css/profile-home.css">
+  </head>
+
+  <body class="profile-home">
+    <main class="profile-shell">
+      {% include profile-nav.html %}
+
+      <section class="profile-intro" aria-labelledby="about-title">
+        <div class="profile-copy">
+          <h1 id="about-title">About Me <a href="{{ base_path }}/cv/">- CV</a></h1>
+          {% if page.keywords %}
+            <p class="profile-keywords">{{ page.keywords | join: " - " }}</p>
+          {% endif %}
+          <div class="profile-content">
+            {{ content }}
+          </div>
+        </div>
+
+        <aside class="profile-media" aria-label="Profile summary">
+          {% if site.author.avatar %}
+            <img src="{{ base_path }}/images/{{ site.author.avatar }}" alt="{{ site.author.name | default: site.title }}">
+          {% endif %}
+          <div class="profile-meta">
+            {% if site.author.location %}
+              <span>{{ site.author.location }}</span>
+            {% endif %}
+            {% if site.author.github %}
+              <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+            {% endif %}
+            {% if site.author.email %}
+              <a href="mailto:{{ site.author.email }}">Email</a>
+            {% endif %}
+          </div>
+        </aside>
+      </section>
+
+      {% if page.research_themes %}
+        <section class="profile-section" aria-labelledby="themes-title">
+          <h2 id="themes-title">Research Themes</h2>
+          <div class="theme-list">
+            {% for theme in page.research_themes %}
+              <article class="theme-item">
+                <h3>{{ theme.title }}</h3>
+                <p>{{ theme.description }}</p>
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+
+      <section class="profile-section" aria-labelledby="writing-title">
+        <h2 id="writing-title">Selected Writing</h2>
+        <div class="work-list">
+          {% assign visible_posts = site.posts | where_exp: "post", "post.title" | slice: 0, 5 %}
+          {% for post in visible_posts %}
+            <article class="work-item">
+              <div class="work-thumb" aria-hidden="true">{{ forloop.index }}</div>
+              <div>
+                <h3><a href="{{ post.url | prepend: base_path }}">{{ post.title }}</a></h3>
+                {% if post.subtitle %}
+                  <p>{{ post.subtitle }}</p>
+                {% elsif post.excerpt %}
+                  <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+                {% endif %}
+                <span>{{ post.date | date: "%B %-d, %Y" }}</span>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
